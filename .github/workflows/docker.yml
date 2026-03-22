@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-nginx .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-nginx ./project2
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/my-nginx
